@@ -1,40 +1,6 @@
 @import "https://unpkg.com/open-props";
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-}
-
-@keyframes fade-out {
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes slide-from-bottom {
-    from {
-        transform: translateY(50px);
-    }
-}
-
-@keyframes slide-to-top {
-    to {
-        transform: translateY(-50px);
-    }
-}
-
-@keyframes scale-down {
-    to {
-        transform: scale(.9);
-    }
-}
-
-@keyframes scale-up {
-    from {
-        transform: scale(.9);
-    }
-}
+/* define keyframes here */
 
 :root {
     --duration-xx-fast: 100ms;
@@ -45,13 +11,6 @@
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    font-family: var(--font-sans);
-    line-height: 1.5;
-    padding: var(--size-5);
-    color: var(--gray-7);
 }
 
 body,
@@ -69,70 +28,9 @@ ul {
     font-size: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--gray-9);
-    font-weight: 600;
-}
-
 img,
 svg {
     max-width: 100%;
     height: auto;
     display: block;
-}
-
-#modalDialog {
-    view-transition-name: dialog;
-}
-
-::view-transition-new(dialog) {
-    animation: var(--duration-xx-fast) var(--ease-out-4) var(--duration-xx-fast) both fade-in,
-        var(--duration) var(--ease-4) both slide-from-bottom;
-}
-
-::view-transition-old(dialog) {
-    animation: var(--duration-xx-fast) var(--ease-in-4) both fade-out,
-        var(--duration) var(--ease-4) both scale-down;
-}
-
-dialog {
-    color: inherit;
-    border: none;
-    width: 100%;
-    max-width: 400px;
-    border-radius: var(--radius-2);
-    padding: 0;
-    box-shadow: var(--shadow-4);
-
-    &::backdrop {
-        background-color: black;
-        opacity: .35;
-    }
-}
-
-button {
-    font: inherit;
-    color: inherit;
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dialog__header {
-    padding: var(--size-5);
-    /* border-bottom: 1px solid var(--gray-2); */
-    background-color: var(--gray-1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.dialog__body {
-    padding: var(--size-5);
 }

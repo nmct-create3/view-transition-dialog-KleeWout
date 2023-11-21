@@ -33,26 +33,7 @@
             </p>
         </div>
     </dialog>
-    <script>
-        const $showModalDialog = document.getElementById('showModalDialog');
-        const $closeModalDialog = document.getElementById('closeModalDialog');
-        const $dialog = document.getElementById('modalDialog');
 
-        $showModalDialog.addEventListener('click', () => {
-            const transition = document.startViewTransition(() => $dialog.showModal());
-        });
-
-        $closeModalDialog.addEventListener('click', () => {
-            const transition = document.startViewTransition(() => $dialog.close());
-        });
-
-        // listen to the modal close event and start a view transition
-        // const dialog = document.getElementById('modalDialog');
-        // $dialog.addEventListener('close', (e) => {
-        //     e.preventDefault();
-        //     const transition = document.startViewTransition(() => $dialog.close());
-        // });
-    </script>
 </body>
 
 </html>
